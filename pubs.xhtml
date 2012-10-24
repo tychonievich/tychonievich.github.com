@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Luther A. Tychonievich</title>  
+<script><![CDATA[
+var pubs = [
+	{
+		author:"Luther A. Tychonievich and James P. Cohoon",
+		title:"Coalescing Swarms of Limited Capacity Agents: Meeting and Staying Together (without trust)",
+		venue:"IAENG International Journal of Computer Science (IJCS)",
+		where:"Volume 39, Issue 3",
+		when:"September 2012",
+		pages:"pp. 254–260",
+		link:"<a href='http://www.iaeng.org/IJCS/issues_v39/issue_3/index.html'>website</a>",
+	},
+	{
+		author:"Chris H. Gregg, Luther A. Tychonievich, Kim Hzelwood, and James P. Cohoon",
+		title:"EcoSim: A Language and Experience Teaching Parallel Programming in Elementary School",
+		venue:"The 43rd ACM Technical Symposium on Computer Science Education (SIGCSE'12)",
+		where:"Raleigh, NC",
+		when:"February 2012",
+		pages:"pp. 51–56",
+		link:"<a href='http://dx.doi.org/10.1145/2157136.2157155'>DOI: 10.1145/2157136.2157155</a>",
+	},
+	{
+		author:"Luther A. Tychonievich and Robert P. Burton",
+		title:"Visualization of Multidimensional Time",
+		venue:"Visualization and Data Analysis (VDA)",
+		where:"San Francisco, CA",
+		when:"January 2012",
+		pages:"Proc. SPIE 8294, 829410",
+		link:"<a href='http://dx.doi.org/10.1117/12.901551'>DOI: 10.1117/12.901551</a>",
+	},
+	{
+		author:"Jim P. Cohoon and Luther A. Tychonievich",
+		title:"Analysis of a CS1 Approach for Attracting Diverse and Inexperienced Students to Computing Majors",
+		venue:"The 42nd ACM Technical Symposium on Computer Science Education (SIGCSE'11)",
+		where:"Dallas, TX",
+		when:"March 2011",
+		pages:"pp. 165–170",
+		link:"<a href='http://dx.doi.org/10.1145/1953163.1953217'>DOI: 10.1145/1953163.1953217</a>",
+	},
+	{
+		author:"Luther A. Tychonievich and Michael D. Jones",
+		title:"Delaunay Deformable Mesh for the Weathering and Erosion of 3D Terrain",
+		venue:"The Visual Computer",
+		when:"2010",
+		where:"Volume 26, Nombuer 12",
+		pages:"pp. 1485–1495",
+		link:"<a href='http://dx.doi.org/10.1007/s00371-010-0506-2'>DOI: 10.1007/s00371-010-0506-2</a>",
+	},
+	{
+		author:"Luther A. Tychonievich, Robert P. Burton, and Louis P. Tychonievich",
+		title:"Versatile Reactive Navigation",
+		venue:"IEEE/RSJ International Conference on Intelligent Robots and Systems, 2009 (IROS 2009)",
+		where:"St. Louis, MO",
+		when:"October 2009",
+		pages:"pp. 2966–2972",
+		link:"<a href='http://dx.doi.org/10.1109/IROS.2009.5354752'>DOI: 10.1109/IROS.2009.5354752</a>",
+	},
+]
+
+function addPubs(toID, tagname) {
+	for (var i=0; i<pubs.length; i+=1) {
+		var line = document.createElement(tagname);
+		var base = pubs[i].author+" ("+pubs[i].when.replace(/.*([1-2][0-9][0-9][0-9])$/,'$1')+") “"+pubs[i].title+"” <em>"+pubs[i].venue+"</em> "+pubs[i].where+". "+pubs[i].pages;
+		base = base.replace(/([^ ])[ \.]*$/g, "$1.");
+		if (pubs[i].link)
+			base += " <small>"+pubs[i].link+"</small>";
+		line.innerHTML = base.replace(/ ([\.,;?”])/,"$1");
+		document.getElementById(toID).appendChild(line);
+	}
+}
+]]></script>  
+<link rel="stylesheet" type="text/css" href="fonts.css"/>
+<style>  
+	body { font-family: ITC Stone Informal Std, AveriaSerif; max-width:48em; margin:1em auto; line-height:1.5em; }
+	img.face { height:14.2em; display:float; float:left; margin:1em; margin-left:0em; border-radius:1em; }
+	h1 { font-weight:normal; font-size:150%; text-align:center;}
+	.top { padding-top:1em; padding-bottom:0.5em; background-color:#aaaaff; margin:0em -1em; border-radius: 1em 1em 0em 0em; }
+	.bottom {
+		padding-top:2em; padding-bottom:1em; background-color:#aaaaff; margin:0em -2em; border-radius: 0em 0em 2em 2em;
+	}
+	.menu { background-color:#eeeeff; padding:0.5em; margin:0em -1.5em; text-align:center;}
+	.menu > a { padding:0.25ex 0.5ex; margin:0em 1em; text-decoration:none; border-radius:0.5ex; background-color:white; }
+	p { margin:0.75em 0em; text-align:justify; }
+	div + p { margin-top:1em; }
+	center { font-size:75%; }
+</style>  
+</head>  
+<body id="body" style="background-color:white">  
+
+<h1 class="top">Publications</h1>
+<div class="menu">
+	<a href="index.xhtml">home</a>
+</div>
+
+<script>addPubs("body","p")</script>
+<noscript>Publications are presented using javascript, which does not seem to be wroking on your browser.</noscript>
+
+<center class="bottom">Last updated 2012-08-28</center>
+</body>
+</html>
