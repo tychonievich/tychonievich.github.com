@@ -1,0 +1,10 @@
+## editor backup files
+*.bak
+*~
+
+## OS X
+.DS_Store
+
+## Windows
+Thumbs.db
+Desktop.ini
